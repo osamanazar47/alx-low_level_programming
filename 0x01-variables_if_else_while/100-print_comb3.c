@@ -14,10 +14,17 @@ int main(void)
 		{
 			if (i < j)
 			{
+				if (!first_combination)
+				{
+					putchar(',');
+					putchar(' ');
+				}
+				else 
+				{
+					first_combination = 0;
+				}
 				putchar('0' + i);
 				putchar('0' + j);
-				putchar(',');
-				putchar(' ');
 			}
 		}
 	}
