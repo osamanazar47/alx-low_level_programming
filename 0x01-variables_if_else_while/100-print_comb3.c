@@ -6,7 +6,7 @@
  */
 int main(void)
 {
-	int i, j;
+	int i, j, first_combination = 1;
 
 	for (i = 0; i <= 9; i++)
 	{
