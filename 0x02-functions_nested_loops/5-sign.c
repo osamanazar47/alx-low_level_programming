@@ -2,7 +2,7 @@
 /**
  * print_sign - a function that prints the sign of the number
  *
- * n: the number we want to know the sign of
+ * @n: the number we want to know the sign of
  *
  * Return: 1 for +, 0 for 0, -1 for -
  */
