@@ -23,5 +23,5 @@ void times_table(void)
 		putchar(result + '0');
 		putchar('\n');
 	}
-	return (0);
+	return (result);
 }
