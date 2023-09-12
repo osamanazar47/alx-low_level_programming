@@ -28,3 +28,9 @@ void print_alphabet_x10(void)
 					}
 					_putchar('\n');
 					}
+include "main.h"
+
+int _islower(int c);
+{
+
+}
