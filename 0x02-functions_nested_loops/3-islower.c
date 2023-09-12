@@ -5,7 +5,7 @@
  * Return: 0 as always
  */
 
-int main(void)
+int _islower(int c)
 {
 	char testchar = 'c';
 
