@@ -3,11 +3,11 @@
 /**
  * @n:the function that we will compute
  * _abs - a function that computes the absolute value of an integer
- * Return: o for success
+ * Return: 0 for success
  */
 int _abs(int n)
 {
-	if (n >= o)
+	if (n >= 0)
 	{
 		return (n);
 	}
