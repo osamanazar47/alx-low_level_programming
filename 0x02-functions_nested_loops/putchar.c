@@ -64,3 +64,7 @@ int print_last_digit(int)
 		last_digit = n % 10;
 	}
 }
+
+void jack_bauer(void)
+{
+}
