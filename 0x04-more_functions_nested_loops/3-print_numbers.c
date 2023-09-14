@@ -11,7 +11,7 @@ void print_numbers(void)
 
 	do
 	{
-		_puchar(num + 48);
+		_putchar(num + 48);
 		num++;
 	}
 	while (num >= 0 && n <= 9);
