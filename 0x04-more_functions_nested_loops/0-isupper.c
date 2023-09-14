@@ -4,7 +4,14 @@
  * _isupper - a function that checks the uppercase character
  * Return: 0 for lowercase 1 for uppercase
  */
-int main(void)
+int _isupper(int c)
 {
-	_isupper();
+	if (c >= '65' && c <= '90')
+	{
+		return (1);
+	}
+	else
+	{
+		return (0);
+	}
 }
