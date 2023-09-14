@@ -11,3 +11,5 @@ int _isupper(int c)
 		return (0);
 	}
 }
+
+int _isdigit(int c);
