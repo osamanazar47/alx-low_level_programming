@@ -17,12 +17,9 @@ int main(void)
 			printf("fizzbuzz");
 		else
 			printf("%d", i);
-		
 		if (i != 100)
 			printf(" ");
-		else
-			printf("\n");
 	}
-
+	printf("\n");
 	return (0);
 }
