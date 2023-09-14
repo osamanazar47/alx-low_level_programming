@@ -1,17 +1,7 @@
-#include <stdio.h>
+#ifndef MAIN_H
+#define MAIN_H
 
-int _isupper(int c)
-{
-	if (i >= 'A' && i <= 'Z')
-	{
-		return (1);
-	}
-	else
-	{
-		return (0);
-	}
-}
-
+int _isupper(int c);
 int _isdigit(int c);
-{
-}
+
+#endif
