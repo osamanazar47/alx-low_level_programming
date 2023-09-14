@@ -4,11 +4,12 @@
  * @size: size of the triangle
  * Return: void
  */
+
 void print_triangle(int size)
 {
 	int x, y, z;
 
-	if (size <= 0);
+	if (size <= 0)
 	{
 		_putchar('\n');
 	}
@@ -18,11 +19,11 @@ void print_triangle(int size)
 		{
 			for (y = size - x; y > 1; y--)
 			{
-				_putchar(' ');
+				_putchar(32);
 			}
 			for (z = 0; z <= x; z++)
 			{
-				_putchar('#');
+				_putchar(35);
 			}
 			_putchar('\n');
 		}
