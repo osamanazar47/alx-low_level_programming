@@ -6,7 +6,7 @@
  * @str: the string
  * Return: void
  */
-void puts(char *str)
+void puts2(char *str)
 {
 	size_t length = strlen(str);
 	int i = length - 1;
