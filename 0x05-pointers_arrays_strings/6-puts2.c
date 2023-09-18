@@ -8,9 +8,9 @@
  */
 void puts2(char *str)
 {
-	int i = 0;
+	int i = 0, size_t length = strlen(str);
 
-	while (str[i] != '\0')
+	while (str[i] != '\0' && i < length)
 	{
 		putchar(str[i]);
 		i += 2;
