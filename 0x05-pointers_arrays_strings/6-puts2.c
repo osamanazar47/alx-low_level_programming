@@ -2,21 +2,18 @@
 #include <stdio.h>
 #include <string.h>
 /**
- * puts - prints every other character of the string
+ * puts2 - prints every other character of the string
  * @str: the string
  * Return: void
  */
 void puts2(char *str)
 {
-	size_t length = strlen(str);
-	int i = length - 1;
+	int i = 0;
 
-	while (i >= 0)
+	while (str[i] != '\0')
 	{
-		if (i % 2 == 0)
-		{
-			printf("%c", str[i]);
-		}
-		i--;
+		putchar(str[i]);
+		i += 2;
 	}
+	putchar('\n');
 }
