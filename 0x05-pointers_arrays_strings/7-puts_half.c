@@ -23,5 +23,4 @@ void puts_half(char *str)
 	{
 		putchar(str[i]);
 	}
-	printf("\n");
 }
