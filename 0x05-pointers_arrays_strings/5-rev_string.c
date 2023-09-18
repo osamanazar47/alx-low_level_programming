@@ -8,5 +8,17 @@
  */
 void rev_string(char *s)
 {
-	strrev(s);
+	size_t length = strlen(s);
+	char *start = s;
+	char *end = s + length - 1;
+
+	while (start < end)
+	{
+		char os = *start;
+		*start = *end;
+		*end = os;
+
+		start++;
+		end--;
+	}
 }
