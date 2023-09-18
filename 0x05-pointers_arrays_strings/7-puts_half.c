@@ -8,8 +8,8 @@
  */
 void puts_half(char *str)
 {
-	size_t length = strlen(str) - 1;
-	size_t i, start_index;
+	size_t length = strlen(str);
+	size_t start_index;
 
 	if (length % 2 == 0)
 	{
@@ -17,11 +17,12 @@ void puts_half(char *str)
 	}
 	else
 	{
-		start_index = (length - 1) / 2;
+		start_index = (length - 1) / 2 + 1;
 	}
-	for (i = start_index; i < length; i++)
+	while (str[start_index] != '\0')
 	{
-		putchar(str[i]);
+		putchar(str[start_index]);
+		start_index++;
 	}
 	putchar('\n');
 }
