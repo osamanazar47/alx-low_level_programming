@@ -28,7 +28,7 @@ char *leet(char *str)
 		}
 		else if (str[i] == 't' || str[i] == 'T')
 		{
-			str[i] == '7';
+			str[i] = '7';
 		}
 		else if (str[i] ==  'l' || str[i] == 'L')
 		{
