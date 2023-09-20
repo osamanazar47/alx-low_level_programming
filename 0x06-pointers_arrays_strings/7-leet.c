@@ -9,31 +9,27 @@
  */
 char *leet(char *str)
 {
-	int length = strlen(str);
-	int i;
+	char leet_rep[256] = {0};
 
-	for (i = 0; i < length; i++)
+	leet_rep['a'] = '4';
+	leet_rep['A'] = '4';
+	leet_rep['e'] = '3';
+	leet_rep['E'] = '3';
+	leet_rep['o'] = '0';
+	leet_rep['O'] = '0';
+	leet_rep['t'] = '7';
+	leet_rep['T'] = '7';
+	leet_rep['l'] = '1';
+	leet_rep['L'] = '1';
+	int i = 0;
+
+	while (str[i])
 	{
-		if (str[i] == 'a' || str[i] == 'A')
+		if (leet_rep[str[i]])
 		{
-			str[i] = '4';
+			str[i] = leet_rep[str[i]];
 		}
-		else if (str[i] == 'e' || str[i] == 'E')
-		{
-			str[i] = '3';
-		}
-		else if (str[i] == 'o' || str[i] == 'O')
-		{
-			str[i] = '0';
-		}
-		else if (str[i] == 't' || str[i] == 'T')
-		{
-			str[i] = '7';
-		}
-		else if (str[i] ==  'l' || str[i] == 'L')
-		{
-			str[i] = '1';
-		}
+			i++;
 	}
 	return (str);
 }
