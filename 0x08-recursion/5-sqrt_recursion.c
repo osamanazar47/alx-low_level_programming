@@ -3,6 +3,7 @@
 /**
  * _sqrt_recursion - function that returns the natural square rootof a number
  * @n: the number
+ * @i: the guess
  * Return: the natural square root of n
  */
 int _sqrt(int n, int i);
@@ -11,7 +12,7 @@ int _sqrt_recursion(int n)
 {
 	if (n < 0)
 		return (-1);
-	return (_sqrt(n, n / 10));
+	return (_sqrt(n, n / 2));
 }
 /**
  * _sqrt - a recursive function that finds the square root
