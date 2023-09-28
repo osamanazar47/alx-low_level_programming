@@ -16,7 +16,7 @@ int is_palindrome(char *s)
 
 	if (length <= 1)
 		return (1);
-	return (_palindrome(s, 0, lenght - 1));
+	return (_palindrome(s, 0, length - 1));
 }
 /**
  * _palindrome - a recursive function
