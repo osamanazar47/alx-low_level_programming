@@ -5,6 +5,8 @@
  * @n: the number
  * Return: the natural square root of n
  */
+int sqrt(int n, int i);
+
 int _sqrt_recursion(int n)
 {
 	if (n < 0)
