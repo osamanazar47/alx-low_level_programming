@@ -12,7 +12,7 @@ int _sqrt_recursion(int n)
 {
 	if (n < 0)
 		return (-1);
-	return (_sqrt(n, n / 2));
+	return (_sqrt(n, 1));
 }
 /**
  * _sqrt - a recursive function that finds the square root
