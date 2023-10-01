@@ -1,5 +1,6 @@
 #include "main.h"
 #include <stdio.h>
+#include <string.h>
 /**
  * wildcmp - compares two strings to check if they are identical
  * @s1: the first string
@@ -8,6 +9,11 @@
  */
 int wildcmp(char *s1, char *s2)
 {
+	int len1 = strlen(s1);
+	int len2 = strlen(s2);
+
+	if (len1 < len2)
+		return (0);
 	if (*s2 == '*')
 		return (1);
 	if (*s1 != *s2)
