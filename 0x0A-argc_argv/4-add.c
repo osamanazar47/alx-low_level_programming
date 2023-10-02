@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <ctype.h>
 /**
  * main - program the multiplies two numbers
  * @argc: the number of arguments
@@ -9,24 +10,31 @@
 int main(int argc, char *argv[])
 {
 	int add = 0;
-	int i;
+	int i = 1, j;
+	char *dig;
 
 	if (argc <= 1)
 	{
 		printf("0\n");
+		return (0);
 	}
-	if (argc > 1)
+	while (i < argc)
 	{
-		for (i = 1; i < argc; i++)
+		dig = argv[i];
+		j = 0;
+
+		while (dig[j] != '\0')
 		{
-			if (*argv[i] < '0' || *argv[i] > '9')
+			if (!isdigit(dig[j]))
 			{
 				printf("Error\n");
 				return (1);
 			}
-			add += atoi(argv[i]);
+			j++;
 		}
-		printf("%d\n", add);
+		add += atoi(argv[i]);
+		i++;
 	}
+	printf("%d\n", add);
 	return (0);
 }
