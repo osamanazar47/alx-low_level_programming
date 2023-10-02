@@ -9,21 +9,26 @@
 int main(int argc, char *argv[])
 {
 	int add;
+	int i;
+	add = 0;
 
-	if (argc != 3)
+	if (argc == 1)
 	{
 		printf("0\n");
 		return (0);
 	}
-	if (*argv[1] >= '0' && *argv[1] <= '9' && *argv[2] >= '0' && *argv[2] <= '9')
+	for (i = 1; i < argc; i++)
 	{
-		add = atoi(argv[1]) + atoi(argv[2]);
-		printf("%d\n", add);
+		if (*argv[i] >= '0' && *argv[i] <= '9')
+		{
+			add += atoi(argv[i]);
+		}
+		if (*argv[i] <= '0' || *argv[i] >= '9')
+		{
+			printf("Error\n");
+			return (1);
+		}
 	}
-	else
-	{
-		printf("Error\n");
-		return (1);
-	}
+	printf("%d\n", add);
 	return (0);
 }
