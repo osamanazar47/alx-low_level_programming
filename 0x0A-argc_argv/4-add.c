@@ -24,7 +24,7 @@ int main(int argc, char *argv[])
 		{
 			add += atoi(argv[i]);
 		}
-		if (*argv[i] <= '0' || *argv[i] >= '9')
+		else
 		{
 			printf("Error\n");
 			return (1);
