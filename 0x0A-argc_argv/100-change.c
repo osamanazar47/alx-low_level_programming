@@ -9,7 +9,7 @@
 int main(int argc, char *argv[])
 {
 	int i;
-	int cents = atoi(argv[1]);
+	int cents;
 	int change = 0;
 	int arr[] = {25, 10, 5, 2, 1};
 
@@ -18,7 +18,15 @@ int main(int argc, char *argv[])
 		printf("Error\n");
 		return (1);
 	}
-	for (i = 0; arr[i] != '\0'; i++)
+
+	cents = atoi(argv[1]);
+
+	if (cents < 0)
+	{
+		printf("0\n");
+		return (0);
+	}
+	for (i = 0; (size_t)i < sizeof(arr) / sizeof(arr[0]); i++)
 	{
 		change += (cents / arr[i]);
 		cents = cents % arr[i];
