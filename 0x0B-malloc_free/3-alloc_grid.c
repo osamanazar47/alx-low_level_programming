@@ -2,12 +2,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 /**
- * free_grid - for freeing the grid
- * @grid: the 2d array
- * @height: the height of the array
- */
-void _free(int **grid, int height)
-/**
  * alloc_grid -  returns a pointer to a 2 dimensional array of integers
  * @width: the colunms of the 2d array
  * @height: the rows of the 2d array
