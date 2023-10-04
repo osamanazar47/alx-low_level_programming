@@ -2,12 +2,17 @@
 #include <stdio.h>
 #include <stdlib.h>
 /**
+ * free_grid - for freeing the grid
+ * @grid: the 2d array
+ * @height: the height of the array
+ */
+void free_grid(int **grid, int height);
+/**
  * alloc_grid -  returns a pointer to a 2 dimensional array of integers
  * @width: the colunms of the 2d array
  * @height: the rows of the 2d array
  * Return: a pointer to the memory allocation of the 2d array
  */
-void free_grid(int **grid, int height);
 int **alloc_grid(int width, int height)
 {
 	int i, j;
