@@ -7,6 +7,7 @@
  * @height: the rows of the 2d array
  * Return: a pointer to the memory allocation of the 2d array
  */
+void free_grid(int **grid, int height);
 int **alloc_grid(int width, int height)
 {
 	int i, j;
