@@ -27,6 +27,7 @@ int **alloc_grid(int width, int height)
 		s[i] = malloc(width * sizeof(int));
 		if (s[i] == NULL)
 		{
+			free_grid(s, i);
 			return (NULL);
 		}
 	}
@@ -38,4 +39,22 @@ int **alloc_grid(int width, int height)
 		}
 	}
 	return (s);
+}
+/**
+ * free_grid - for freeing the grid
+ * @grid: the 2d array
+ * @height: the height of the array
+ * Return: void
+ */
+void free_grid(int **grid, int height)
+{
+	if (grid == NULL)
+	{
+		return;
+	}
+	for (int i = 0; i < height; i++)
+	{
+		free(grid[i]);
+	}
+	free(grid);
 }
