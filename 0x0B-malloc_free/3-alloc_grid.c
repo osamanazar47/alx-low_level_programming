@@ -6,6 +6,7 @@
  * @grid: the 2d array
  * @height: the height of the array
  */
+void free_g(int **grid, int height)
 /**
  * alloc_grid -  returns a pointer to a 2 dimensional array of integers
  * @width: the colunms of the 2d array
@@ -32,7 +33,7 @@ int **alloc_grid(int width, int height)
 		s[i] = malloc(width * sizeof(int));
 		if (s[i] == NULL)
 		{
-			free_grid(s, i);
+			free_g(s, i);
 			return (NULL);
 		}
 	}
@@ -51,7 +52,7 @@ int **alloc_grid(int width, int height)
  * @height: the height of the array
  * Return: void
  */
-void free_grid(int **grid, int height)
+void free_g(int **grid, int height)
 {
 	int i;
 
