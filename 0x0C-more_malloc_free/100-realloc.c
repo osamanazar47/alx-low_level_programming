@@ -1,5 +1,7 @@
 #include "main.h"
 #include <stdlib.h>
+#include <stdio.h>
+#include <string.h>
 /**
  * _realloc -  reallocates a memory block using malloc and free
  * @ptr: the pointer to the block of memory
