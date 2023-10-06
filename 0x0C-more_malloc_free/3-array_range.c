@@ -1,4 +1,4 @@
-#include "mian.h"
+#include "main.h"
 #include <stdlib.h>
 /**
  * array_range - creates an array of integers between min and max
