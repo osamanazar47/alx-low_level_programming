@@ -1,7 +1,5 @@
 #include "mian.h"
-#include <stdio.h>
 #include <stdlib.h>
-#include <string.h>
 /**
  * array_range - creates an array of integers between min and max
  * @min: minimum value in the string
