@@ -1,7 +1,7 @@
 #include "dog.h"
 #include <stdlib.h>
 /**
- * free_dogs - frees the dogs
+ * free_dog - frees the dogs
  * @d: the pointer to the dogs
  */
 void free_dog(dog_t *d)
