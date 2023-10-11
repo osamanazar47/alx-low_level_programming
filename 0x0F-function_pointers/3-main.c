@@ -17,9 +17,8 @@ int main(int argc, char *argv[])
 	}
 	num1 = atoi(argv[1]);
 	num2 = atoi(argv[3]);
-	char *operator = argv[2];
 
-	operation = get_op_func(operator);
+	operation = get_op_func(argv[2]);
 
 	if (operation == NULL)
 	{
