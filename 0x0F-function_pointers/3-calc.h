@@ -2,7 +2,6 @@
 #define 3-CALC_H
 #include <stdio.h>
 #include <stdlib.h>
-#include <string.h>
 /**
  * struct op - the structure of our operation
  * @op: the operator

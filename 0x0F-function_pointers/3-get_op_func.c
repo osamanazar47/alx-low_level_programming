@@ -13,7 +13,7 @@ int (*get_op_func(char *s))(int, int)
 
 	while (op[i].op != NULL)
 	{
-		if (s && strcmp(ops[i].op, s) == 0)
+		if (s && s[0] == ops[i].op && !s[1])
 			return (op[i].f);
 		i++;
 	}
