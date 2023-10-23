@@ -3,6 +3,11 @@
 
 #include <stdio.h>
 #include <stdlib.h>
+/**
+ * struct listint_s - a structure for the nodes of the list
+ * @n: the value in the node
+ * @next: the pointer to the next node
+ */
 typedef struct listint_s
 {
 	int n;
