@@ -6,7 +6,8 @@
  */
 unsigned int binary_to_unit(const char *b)
 {
-	unsigned int i = 0, j = strlen(b) - 1, sum = 0;
+	int i = 0, j = 0;
+	unsigned int sum = 0;
 
 	if (b == NULL)
 		return (0);
@@ -14,9 +15,14 @@ unsigned int binary_to_unit(const char *b)
 	{
 		if (b[i] != '0' && b[i] != '1')
 			return (0);
-		sum += (b[j] - '0') * (1 << i);
 		i++;
-		j--;
+	}
+	i--;
+	while (i >= 0)
+	{
+		sum += (b[i] - '0') * (1 << j);
+		i--;
+		j++;
 	}
 	return (sum);
 }
