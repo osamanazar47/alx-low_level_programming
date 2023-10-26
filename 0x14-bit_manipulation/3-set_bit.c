@@ -7,7 +7,7 @@
  */
 int set_bit(unsigned long int *n, unsigned int index)
 {
-	unsigned int count = 0, bitslen = sizeof(unsigned long int) * 8;
+	unsigned int bitslen = sizeof(unsigned long int) * 8;
 
 	if (index >= bitslen)
 		return (-1);
