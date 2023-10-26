@@ -1,0 +1,25 @@
+
+========== 0-binary_to_uint.c ==========
+binary_to_uint
+
+========== 0-main.c ==========
+0-main.c:11: WARNING: please, no spaces at the start of a line
+0-main.c:13: WARNING: please, no spaces at the start of a line
+0-main.c:14: WARNING: please, no spaces at the start of a line
+0-main.c:15: WARNING: please, no spaces at the start of a line
+0-main.c:16: WARNING: please, no spaces at the start of a line
+0-main.c:17: WARNING: please, no spaces at the start of a line
+0-main.c:18: WARNING: please, no spaces at the start of a line
+0-main.c:19: WARNING: please, no spaces at the start of a line
+0-main.c:20: WARNING: please, no spaces at the start of a line
+0-main.c:21: WARNING: please, no spaces at the start of a line
+0-main.c:22: WARNING: please, no spaces at the start of a line
+0-main.c:23: WARNING: please, no spaces at the start of a line
+total: 0 errors, 12 warnings, 24 lines checked
+main
+
+========== a ==========
+a:0: ERROR: Does not appear to be a unified-diff format patch
+total: 1 errors, 0 warnings, 0 lines checked
+
+========== main.h ==========
