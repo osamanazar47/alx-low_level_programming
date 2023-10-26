@@ -4,7 +4,7 @@
  * @b: the binary numberas a string
  * Return: the converted number or 0
  */
-unsigned int binary_to_unit(const char *b)
+unsigned int binary_to_uint(const char *b)
 {
 	int i = 0, j = 0;
 	unsigned int sum = 0;
