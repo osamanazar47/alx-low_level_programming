@@ -36,13 +36,18 @@ void print_elf_header(int file)
 }
 
 int main(int ac, char **av) {
-    int file;
+    int fd;
 
-    if (ac != 2 || (file = open(av[1], O_RDONLY)) == -1)
-        print_error("Usage: %s elf_filename\n", 98);
+   Eif64_Ehdr h;
+   ssize_t b;
 
-    print_elf_header(file);
-
-    (void)close(file);
-    return (0);
+   if (ac != 2)
+   {
+	   dprintf(STDERR_FILENO, "Usage: elf_header elf_filename\n"), exit(98);
+   }
+   fd = open(av[1], O_RDONLY);
+   if (fd == -1)
+	   dprintf(STDERR_FILENO, "Can't open file: %s\n", av[1]), exit(98);
+   b = read(fd, &h, sizeof(h));
+   if (b < 1 || b != sizeof(h)
 }
