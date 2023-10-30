@@ -15,7 +15,7 @@ void print_elf_header(int file)
     lseek_result = lseek(file, 1, SEEK_SET);
     read_result = read(file, buffer, BUFFER_SIZE);
 
-    if (lseek_result == (off_t)-1 || read_result == (ssize_t)-1)
+    if (lseek_result == -1 || read_result == -1)
         print_error("Error: Unable to read ELF header from file\n", 98);
 
     printf("ELF Header:\n");
