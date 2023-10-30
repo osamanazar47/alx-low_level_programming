@@ -7,32 +7,21 @@
  */
 ssize_t read_textfile(const char *filename, size_t letters)
 {
-	FILE *file = fopen(filename, "r");
-	char *buffer;
-	char *bytesread;
-
-	if (file == NULL)
+	int file;
+	ssize_t bytes;
+	char buffer[BUFFER_SIZE * 8];
+	if (!filename || !letters)
 		return (0);
-	buffer = malloc(letters);
-	if (buffer == NULL)
+	file = open(filename, O_RDONLY);
+	if (file == -1)
+		return (0);
+	bytes = read(file, buffer, letters);
+	if (bytes == -1)
 	{
-		fclose(file);
+		close(file);
 		return (0);
 	}
-	bytesread = fgets(buffer, letters, file);
-	if (bytesread == NULL)
-	{
-		fclose(file);
-		free(buffer);
-		return (0);
-	}
-	if (write(1, bytesread, strlen(bytesread) + 1) == -1)
-	{
-		fclose(file);
-		free(buffer);
-		return (0);
-	}
-	fclose(file);
-	free(buffer);
-	return (strlen(bytesread));
+	bytes = write(1, buffer, bytes);
+	close(file);
+	return (bytes);
 }
