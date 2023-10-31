@@ -160,7 +160,7 @@ void print_entry(Elf64_Ehdr h)
 	insigned char *p = (unsigned char *)&h.e_entry;
 
 	printf("  Entry point address:               0x");
-	if (h.e_iden[EI_DATA] != ELFDATA2MSB)
+	if (h.e_ident[EI_DATA] != ELFDATA2MSB)
 	{
 		i = h.e_ident[EI_CLASS] == ELFCLASS64 ? 7 : 3;
 		while (!p[i])
@@ -173,7 +173,7 @@ void print_entry(Elf64_Ehdr h)
 	else
 	{
 		i = 0;
-		len = h.e_ident[EICLASS] == ELFCLASS64 ? 7 : 3;
+		len = h.e_ident[EI_CLASS] == ELFCLASS64 ? 7 : 3;
 		while (!p[i])
 			i++;
 		printf("%x", p[i++]);
@@ -207,7 +207,7 @@ void print_osabi_more(Elf64_Ehdr h)
 int main(int ac, char **av)
 {
 	int fd;
-	Eif64_Ehdr h;
+	Elf64_Ehdr h;
 	ssize_t b;
 
    if (ac != 2)
