@@ -22,7 +22,7 @@ void print_class(Elf64_Ehdr h)
 	printf(" class:                             ");
 	switch (h.e_ident[EI_CLASS])
 	{
-		case ELFCCASS64:
+		case ELFCLASS64:
 			printf("ELF64");
 		break;
 		case ELFCLASS32:
@@ -157,7 +157,7 @@ void print_type(Elf64_Ehdr h)
 void print_entry(Elf64_Ehdr h)
 {
 	int i = 0, len = 0;
-	insigned char *p = (unsigned char *)&h.e_entry;
+	unsigned char *p = (unsigned char *)&h.e_entry;
 
 	printf("  Entry point address:               0x");
 	if (h.e_ident[EI_DATA] != ELFDATA2MSB)
@@ -220,7 +220,7 @@ int main(int ac, char **av)
    b = read(fd, &h, sizeof(h));
    if (b < 1 || b != sizeof(h))
 	   dprintf(STDERR_FILENO, "Can't read from file: %s\n", av[1]), exit(98);
-   if (h.e_ident[0] == 0x7f && h.e_ident[1] == 'E' && h.e_ident[2] == 'L" &&
+   if (h.e_ident[0] == 0x7f && h.e_ident[1] == 'E' && h.e_ident[2] == 'L' &&
 		   h.e_ident[3] == 'F')
    {
 	   printf("ELF Header:\n");
@@ -235,4 +235,5 @@ int main(int ac, char **av)
    print_abiversion(h);
    print_type(h);
    print_entry(h);
+   return (0);
 }
