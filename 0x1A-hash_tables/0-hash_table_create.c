@@ -6,14 +6,15 @@
  */
 hash_table_t *hash_table_create(unsigned long int size)
 {
-	unsigned long int i = 0;
+	unsigned long int i;
 	hash_table_t *newt;
 
+	i = 0;
 	newt = malloc(sizeof(hash_table_t));
 	if (newt == NULL)
 		return (NULL);
 	newt->size = size;
-	newt->array = malloc(sizeof(hash_node_t) * size);
+	newt->array = malloc(sizeof(hash_node_t *) * size);
 	if (newt->array == NULL)
 		return (NULL);
 	while (i < size)
