@@ -8,10 +8,11 @@
 */
 int linear_search(int *array, size_t size, int value)
 {
+    int i;
+    int i_size = (int)size;
+
     if (array != NULL)
     {
-        int i;
-        int i_size = (int)size;
 
         for (i = 0; i < i_size; i++)
         {
