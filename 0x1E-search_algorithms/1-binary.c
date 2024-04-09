@@ -52,7 +52,7 @@ int binary_search(int *array, size_t size, int value)
 		}
 		else
 		{
-			e = m - 1;
+			e = m;
 		}
 	}
 	return (-1);
