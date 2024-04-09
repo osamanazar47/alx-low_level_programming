@@ -9,7 +9,7 @@ void print_array(int *array, int b, int e)
 {
 	int i;
 
-	printf("Sarching in array:");
+	printf("Searching in array:");
 	for (i = b; i <= e; i++)
 	{
 		if (i != e)
