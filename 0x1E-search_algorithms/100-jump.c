@@ -5,16 +5,17 @@
 * @array: a pointer to the first elemet of the array to search in
 * @size: the number of elements in array
 * @value: the value to search for
-* Return: the firstindex where value is located or -1 on failure
+* Return: the first index where value is located or -1 on failure
 */
 int jump_search(int *array, size_t size, int value)
 {
 	int step = sqrt(size);
 	int prev = 0, i;
 
-	if (array == NULL)
+	if (array == NULL || size == 0)
+	{
 		return (-1);
-
+	}
 	while (array[prev] < value && prev < (int)size)
 	{
 		printf("Value checked array[%d] = [%d]\n", prev, array[prev]);
